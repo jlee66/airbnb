@@ -1,6 +1,8 @@
+# TITLE
+
+
 library(readr)
 amsterdam <- read_csv("airbnb_amsterdam.csv")
-
 
 devtools::use_data(amsterdam, overwrite = TRUE)
 
