@@ -1,10 +1,4 @@
-# TITLE
-
-
 library(readr)
-amsterdam <- read_csv("airbnb_amsterdam.csv")
-
-devtools::use_data(amsterdam, overwrite = TRUE)
 
 neighborhood_average <- function(city_data){
 
@@ -22,12 +16,7 @@ neighborhood_average <- function(city_data){
   return(sorted_list)
 }
 
-neighborhood_average(amsterdam)
-
-
 airbnb_listing <- function(data, num_bedrooms, budget, range=budget*0.2){
-
-
   #filter by bedrooms
   bedroom_listing <- subset(data, bedrooms == num_bedrooms, select = c(name, price))
 
@@ -37,11 +26,4 @@ airbnb_listing <- function(data, num_bedrooms, budget, range=budget*0.2){
 
   return (price_listing)
 }
-
-
-sample <- head(amsterdam, n = 10)
-View(sample)
-
-
-
 
