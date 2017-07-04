@@ -1,11 +1,12 @@
-# TITLE
-
-
-library(readr)
-amsterdam <- read_csv("airbnb_amsterdam.csv")
-
-devtools::use_data(amsterdam, overwrite = TRUE)
-
+#' Calculate the average of the airbnb housing options per neighbourhood
+#'
+#' @param city_data  the airbnb dataset from a given city
+#'
+#' @return A data frame containing the price average by neighbourhood
+#' @export
+#'
+#' @examples
+# neighborhood_average(amsterdam_airbnb)
 neighborhood_average <- function(city_data){
 
   # get rid of missing neighborhoods
@@ -22,9 +23,22 @@ neighborhood_average <- function(city_data){
   return(sorted_list)
 }
 
-neighborhood_average(amsterdam)
 
 
+
+#' List the aibnb housing options from data based on the number of bedrooms
+#' num_bedrooms that fall with budget with given range.
+#'
+#' @param data the airbnb dataset from a given city
+#' @param num_bedrooms Number of bedrooms
+#' @param budget Budget in currency from data
+#' @param range Range for prices
+#'
+#' @return A data frame containing the bedrooms under the description's criteria
+#' @export
+#'
+#' @examples
+#' airbnb_listing(amsterdam_airbnb, 2, 100, 10)
 airbnb_listing <- function(data, num_bedrooms, budget, range=budget*0.2){
 
 
@@ -37,11 +51,5 @@ airbnb_listing <- function(data, num_bedrooms, budget, range=budget*0.2){
 
   return (price_listing)
 }
-
-
-sample <- head(amsterdam, n = 10)
-View(sample)
-
-
 
 
