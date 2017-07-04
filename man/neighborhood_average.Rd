@@ -15,3 +15,6 @@ A data frame containing the price average by neighbourhood
 \description{
 Calculate the average of the airbnb housing options per neighbourhood
 }
+\examples{
+neighborhood_average(amsterdam)
+}
