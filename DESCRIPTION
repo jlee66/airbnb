@@ -2,7 +2,7 @@ Package: airbnb
 Type: Package
 Title: Functions for airbnb datasets
 Version: 0.1.0
-Author: ernanda, Jae, Daniel
+Author: Fernanda, Jae, Daniel
 Maintainer: person("Fernanda", "Palacios", email = "ferpalacios.a@gmail.com", role = c("aut", "cre")),
             person("Jae Seung", "Lee", email = "jlee66@babson.edu", role = c("aut", "cre")),
             person("Daniel", "Pieper", email = "danielalexanderpieper@@gmail.com", role = c("aut", "cre"))

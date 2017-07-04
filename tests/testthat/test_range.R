@@ -29,17 +29,3 @@ test_that("Bedrooms Limit Testing", {
   #Testing when the number of bedrooms entered is above the max of that of bedrooms
   expect_error(airbnb_listing(sample, 11, 1000), "Bedrooms cannot be negative or out of the range", fixed = TRUE)
 })
-
-
- for(i in 1:20){
-  x <- sample(1:10, 1)
-  y <- sample(1:10, 1)
-  if(x>y){
-    expect_that(nrow(airbnb_listing(sample,1,50,x)) >= nrow(airbnb_listing(sample,1,50,y)), is_true())
-  } else if(x<y){
-    expect_that(nrow(airbnb_listing(sample,1,50,x)) <= nrow(airbnb_listing(sample,1,50,y)), is_true())
-  } else if(x==y){
-    expect_that(nrow(airbnb_listing(sample,1,50,x)) == nrow(airbnb_listing(sample,1,50,y)), is_true())
-  }
- }
-})
