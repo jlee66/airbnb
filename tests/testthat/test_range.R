@@ -20,14 +20,14 @@ test_that("Range function works", {
 
 test_that("Price Limit Testing", {
   #Testing when price entered is below the min of the price
-  expect_equal(nrow(airbnb_listing(sample, 2, 9)), 0)
+  expect_error(airbnb_listing(sample, 2, 9), "Budget out of limit of price range", fixed = TRUE)
   #Testing when price entered is above the max of the price
-  expect_equal(nrow(airbnb_listing(sample, 2, 10000)), 0)
+  expect_error(airbnb_listing(sample, 2, 10000), "Budget out of limit of price range", fixed = TRUE)
 })
 
 test_that("Bedrooms Limit Testing", {
   #Testing when the number of bedrooms entered is above the max of that of bedrooms
-  expect_equal(nrow(airbnb_listing(sample, 11, 1000)), 0)
+  expect_error(airbnb_listing(sample, 11, 1000), "Bedrooms cannot be negative or out of the range", fixed = TRUE)
 })
 
 
