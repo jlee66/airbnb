@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #' Calculate the average of the airbnb housing options per neighbourhood
 #'
 #' @param city_data  the airbnb dataset from a given city
@@ -7,6 +8,10 @@
 #'
 #' @examples
 # neighborhood_average(amsterdam_airbnb)
+=======
+library(readr)
+
+>>>>>>> 87102bfee20d7cdc21ece96db8dab5750af9782d
 neighborhood_average <- function(city_data){
 
   # get rid of missing neighborhoods
@@ -23,6 +28,7 @@ neighborhood_average <- function(city_data){
   return(sorted_list)
 }
 
+<<<<<<< HEAD
 
 
 
@@ -39,9 +45,9 @@ neighborhood_average <- function(city_data){
 #'
 #' @examples
 #' airbnb_listing(amsterdam_airbnb, 2, 100, 10)
+=======
+>>>>>>> 87102bfee20d7cdc21ece96db8dab5750af9782d
 airbnb_listing <- function(data, num_bedrooms, budget, range=budget*0.2){
-
-
   #filter by bedrooms
   bedroom_listing <- subset(data, bedrooms == num_bedrooms, select = c(name, price))
 
@@ -52,4 +58,7 @@ airbnb_listing <- function(data, num_bedrooms, budget, range=budget*0.2){
   return (price_listing)
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 87102bfee20d7cdc21ece96db8dab5750af9782d
