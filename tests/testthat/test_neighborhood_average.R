@@ -29,15 +29,3 @@ test_that("Missing values are handled", {
   final_res <- res[which(neighborhood_average(sample)$Neighborhood == "Westerpark"), 2]
   expect_equal(final_res, NaN )
 })
-
-
-
-
-
-
-
-
-
-
-
-
