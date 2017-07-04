@@ -1,13 +1,11 @@
 Package: airbnb
 Type: Package
-Title: Functions for airbnb datasets
+Title: Airbnb
 Version: 0.1.0
 Author: Fernanda, Jae, Daniel
-Maintainer: person("Fernanda", "Palacios", email = "ferpalacios.a@gmail.com", role = c("aut", "cre")),
-            person("Jae Seung", "Lee", email = "jlee66@babson.edu", role = c("aut", "cre")),
-            person("Daniel", "Pieper", email = "danielalexanderpieper@@gmail.com", role = c("aut", "cre"))
-Description: Lists bedrooms in corresponding city by eligible criteria.
-License: What license is it under?
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Provides methods to list out housing options under specific criteria in a given city.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Suggests: testthat
+RoxygenNote: 6.0.1
