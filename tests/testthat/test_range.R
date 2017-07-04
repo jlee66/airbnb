@@ -31,5 +31,15 @@ test_that("Bedrooms Limit Testing", {
 })
 
 
-
-
+ for(i in 1:20){
+  x <- sample(1:10, 1)
+  y <- sample(1:10, 1)
+  if(x>y){
+    expect_that(nrow(airbnb_listing(sample,1,50,x)) >= nrow(airbnb_listing(sample,1,50,y)), is_true())
+  } else if(x<y){
+    expect_that(nrow(airbnb_listing(sample,1,50,x)) <= nrow(airbnb_listing(sample,1,50,y)), is_true())
+  } else if(x==y){
+    expect_that(nrow(airbnb_listing(sample,1,50,x)) == nrow(airbnb_listing(sample,1,50,y)), is_true())
+  }
+ }
+})
