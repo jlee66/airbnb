@@ -5,6 +5,7 @@ which the package is being used on.
 
 # installation
 You can install airbnb from github with:
+
 ``` {r airbnb_installation}
 # install.packages("devtools")
 devtools::install_github("FernandaPalacios/airbnb")
@@ -12,17 +13,19 @@ devtools::install_github("FernandaPalacios/airbnb")
 
 # example 
 ## neighborhood_average
+
 ``` {r airbnb_example}
-library(airbnb)
 # load dataset
+amsterdam <- read.csv("airbnb_amsterdam.csv")
 # list out airbnb's average prices per neighbourhood in amsterdam
 neighborhood_average(amsterdam)
 ```
-
+![output](images/image.png)
 
 ## airbnb_listing
+
 ``` {r second_example}
 # list out airbnb's housing options in the given price range and number of bedroooms 
-head(airbnb_listing(amsterdam, 2, 70))
+airbnb_listing(amsterdam, 2, 70)
 ```
-
+![output](images/image2.png)
