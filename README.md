@@ -20,6 +20,7 @@ amsterdam <- read.csv("airbnb_amsterdam.csv")
 # list out airbnb's average prices per neighbourhood in amsterdam
 neighborhood_average(amsterdam)
 ```
+![output](image.png)
 
 ## airbnb_listing
 
@@ -27,5 +28,4 @@ neighborhood_average(amsterdam)
 # list out airbnb's housing options in the given price range and number of bedroooms 
 airbnb_listing(amsterdam, 2, 70)
 ```
-
-
+![output](image2.png)
