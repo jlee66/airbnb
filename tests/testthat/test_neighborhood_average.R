@@ -1,10 +1,6 @@
-library(readr)
 library(testthat)
 
-# data used for testing
-amsterdam <- read_csv("airbnb_amsterdam.csv")
 sample <- head(amsterdam, n = 10)
-
 
 
 context("Neighborhood Average")
