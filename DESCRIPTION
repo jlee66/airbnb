@@ -2,10 +2,14 @@ Package: airbnb
 Type: Package
 Title: Airbnb
 Version: 0.1.0
-Author: Fernanda, Jae, Daniel
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: Provides methods to list out housing options under specific criteria in a given city.
+Authors@R: c(person("Jae", "Lee", email = "jlee66@babson.edu", role = c("aut", "cre")), 
+              person("Daniel", "Pieper", email = "danielalexanderpieper@gmail.com", role = "aut", "cre"),
+              person("Fernanda", "Palacios", email = "ferpalacios.a@gmail.com", role = "aut", "cre"))
+Description:Contains two functions: 1) neighborhood_average, 2) airbnb_listing
+            1) Calculate the average of the airbnb housing options per neighbourhood
+            2) List the aibnb housing options from data based on the number of bedrooms and num_bedrooms that fall with budget with given range.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
+LazyData: TRUE
+Suggest: testthat
 RoxygenNote: 6.0.1
